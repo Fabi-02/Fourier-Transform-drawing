@@ -110,10 +110,10 @@ public class Frame extends JPanel implements ActionListener {
 		}
 
 		for (int i = 1; i < valuesX.size() && i < valuesY.size(); i++) {
-			double x = valuesX.get(i);
-			double lx = valuesX.get(i - 1);
-			double y = valuesY.get(i);
-			double ly = valuesY.get(i - 1);
+			double x = Math.round(valuesX.get(i));
+			double lx = Math.round(valuesX.get(i - 1));
+			double y = Math.round(valuesY.get(i));
+			double ly = Math.round(valuesY.get(i - 1));
 			g2D.drawLine((int) lx, (int) ly, (int) x, (int) y);
 		}
 		if (cycleXpos != -1 && cycleYpos != -1 && valuesX.size() > 1 && valuesY.size() > 1) {
